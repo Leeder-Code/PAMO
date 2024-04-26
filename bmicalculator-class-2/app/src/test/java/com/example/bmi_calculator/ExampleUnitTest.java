@@ -14,4 +14,17 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void calculateBMI(){
+        float weight = 70;
+        float height = 182;
+        double expectedBMI = 21.13;
+
+        // z funkcji calcBMI()
+        double bmi = weight / Math.pow((height/100), 2);
+
+        assertEquals(expectedBMI, bmi, 0.1);
+    }
+
 }
