@@ -19,6 +19,8 @@ public class Home extends AppCompatActivity {
         Button dailyButton = findViewById(R.id.daily);
         Button bmiButton = findViewById(R.id.bmi_calculator);
         Button recipesButton = findViewById(R.id.recipes);
+        Button shoppingListButton = findViewById(R.id.shopping_list);
+        Button chartButton = findViewById(R.id.chart);
 
         dailyButton.setOnClickListener(v -> {
             startActivity(new Intent(Home.this, Daily.class));
@@ -28,6 +30,12 @@ public class Home extends AppCompatActivity {
         });
         recipesButton.setOnClickListener(v -> {
             startActivity(new Intent(Home.this, Recipes.class));
+        });
+        shoppingListButton.setOnClickListener(v -> {
+            startActivity(new Intent(Home.this, ShoppingList.class));
+        });
+        chartButton.setOnClickListener(v -> {
+            startActivity(new Intent(Home.this, Chart.class));
         });
     }
 }
